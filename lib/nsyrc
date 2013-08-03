@@ -3,7 +3,6 @@
 "use strict";
 
 var cli = require('commander');
-var clc = require('cli-color');
 var rek = require('rekuire');
 var version = require('../package.json').version;
 
@@ -12,19 +11,19 @@ var nsyrc = rek('nsyrc-cli');
 cli
     .version(version)
     .option("link", "Set a new nsyrc link",Boolean, false)
+    .option("unlink", "remove a link",Boolean, false)
     .option("show", "Prints the nsyrc links for the current folder",Boolean, false)
-    .option("run", "Run the default nsyrc link",Boolean, false)
-    .option("--no-colors", "Disables colors",Boolean, false)
+    .option("run", "Run the default nsyrc link",Boolean, false) //add optional index
     .parse(process.argv);
-
-if (!cli.colors){
-    nsyrc.disableColors();
-}
 
 if (cli.link) {
     nsyrc.link();
+} else if (cli.unlink) {
+    nsyrc.unlink();
 } else if (cli.show) {
     nsyrc.show();
 } else if (cli.run) {
     nsyrc.run();
+} else {
+    nsyrc.show();
 }

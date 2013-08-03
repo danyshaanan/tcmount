@@ -11,8 +11,7 @@ var nsyrc = rek('nsyrc-cli');
 
 cli
     .version(version)
-    .option("create", "Set a new nsyrc link with current folder as the source",Boolean, false)
-    .option("remove", "Remove all nsyrc settings for this folder",Boolean, false)
+    .option("link", "Set a new nsyrc link",Boolean, false)
     .option("show", "Prints the nsyrc links for the current folder",Boolean, false)
     .option("run", "Run the default nsyrc link",Boolean, false)
     .option("--no-colors", "Disables colors",Boolean, false)
@@ -22,14 +21,10 @@ if (!cli.colors){
     nsyrc.disableColors();
 }
 
-if (cli.create) {
-    nsyrc.create();
-} else if (cli.remove) {
-    nsyrc.remove();
+if (cli.link) {
+    nsyrc.link();
 } else if (cli.show) {
     nsyrc.show();
 } else if (cli.run) {
     nsyrc.run();
-// } else if (cli.install) {
-    // nsyrc.install(cli.install);
 }

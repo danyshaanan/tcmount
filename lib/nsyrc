@@ -1,0 +1,34 @@
+#!/usr/bin/env node
+
+"use strict";
+
+var rek = require('rekuire');
+var cli = rek('commander');
+var version = require('../package.json').version;
+var nsyrc = rek('nsyrc-cli');
+var clc = rek('cli-color');
+
+cli
+    .version(version)
+    .option("create", "Set a new nsyrc link with current folder as the source",Boolean, false)
+    .option("remove", "Remove all nsyrc settings for this folder",Boolean, false)
+    .option("show", "Prints the nsyrc links for the current folder",Boolean, false)
+    .option("run", "Run the default nsyrc link",Boolean, false)
+    // .option("--no-colors", "Disables colors",Boolean, false)
+    .parse(process.argv);
+
+// if (!cli.colors){
+    // nsyrc.disableColors();
+// }
+
+if (cli.create) {
+    nsyrc.create();
+} else if (cli.remove) {
+    nsyrc.remove();
+} else if (cli.show) {
+    nsyrc.show();
+} else if (cli.run) {
+    nsyrc.run();
+// } else if (cli.install) {
+    // nsyrc.install(cli.install);
+}

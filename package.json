@@ -18,7 +18,8 @@
   "dependencies": {
     "rekuire" : "*",
     "cli-color" : "*",
-    "commander" : "*"
+    "commander" : "*",
+    "sha1" : "*"
   },
   "devDependencies": {
       "proxyquire" : "*"

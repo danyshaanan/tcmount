@@ -1,0 +1,28 @@
+{
+  "name": "nsyrc",
+  "main": "./lib/nsyrc",
+  "version": "0.0.0",
+  "description": "Node tool for easily defining and maintaining rsync backups",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/danyshaanan/nsyrc.git"
+  },
+  "scripts" : {
+    "test" : "jasmine-node ./test/",
+    "start" : "node ."
+  },
+  "bin" : {
+      "nsyrc" : "./lib/nsyrc"
+  },
+  "preferGlobal": true,
+  "dependencies": {
+    "rekuire" : "*",
+    "cli-color" : "*",
+    "commander" : "*"
+  },
+  "devDependencies": {
+      "proxyquire" : "*"
+  },
+  "author": "Dany Shaanan",
+  "license": "MIT"
+}

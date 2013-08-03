@@ -14,12 +14,12 @@ cli
     .option("remove", "Remove all nsyrc settings for this folder",Boolean, false)
     .option("show", "Prints the nsyrc links for the current folder",Boolean, false)
     .option("run", "Run the default nsyrc link",Boolean, false)
-    // .option("--no-colors", "Disables colors",Boolean, false)
+    .option("--no-colors", "Disables colors",Boolean, false)
     .parse(process.argv);
 
-// if (!cli.colors){
-    // nsyrc.disableColors();
-// }
+if (!cli.colors){
+    nsyrc.disableColors();
+}
 
 if (cli.create) {
     nsyrc.create();

@@ -2,11 +2,12 @@
 
 "use strict";
 
+var cli = require('commander');
+var clc = require('cli-color');
 var rek = require('rekuire');
-var cli = rek('commander');
 var version = require('../package.json').version;
+
 var nsyrc = rek('nsyrc-cli');
-var clc = rek('cli-color');
 
 cli
     .version(version)

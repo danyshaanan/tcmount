@@ -7,22 +7,22 @@
     "type": "git",
     "url": "git://github.com/danyshaanan/nsyrc.git"
   },
-  "scripts" : {
-    "test" : "jasmine-node ./test/",
-    "start" : "node ."
+  "scripts": {
+    "test": "jasmine-node ./test/",
+    "start": "node ."
   },
-  "bin" : {
+  "bin": {
       "nsyrc" : "./lib/nsyrc"
   },
   "preferGlobal": true,
   "dependencies": {
-    "rekuire" : "*",
-    "cli-color" : "*",
-    "commander" : "*",
-    "sha1" : "*"
+    "rekuire": "*",
+    "cli-color": "*",
+    "commander": "*",
+    "sha1": "*"
   },
   "devDependencies": {
-      "proxyquire" : "*"
+      "proxyquire": "*"
   },
   "author": "Dany Shaanan",
   "license": "MIT"

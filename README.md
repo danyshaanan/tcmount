@@ -8,3 +8,5 @@ TODO
 * Use promises for prompt actions
 * Enable remote pathes in links varification
 * Write proper readme
+* Write tests before refactoring
+* Refactor

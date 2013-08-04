@@ -14,7 +14,7 @@ cli
     .option("link", "Set a new nsyrc link",Boolean, false)
     .option("from <path>", "source of a new link")
     .option("to <path>", "target of a new link")
-    .option("unlink", "remove a link",Boolean, false)
+    .option("unlink [id]", "remove a link")
     .option("show", "Prints the nsyrc links for the current folder",Boolean, false)
     .option("run", "Run the default nsyrc link",Boolean, false) //add optional index
     .parse(process.argv);
@@ -25,7 +25,7 @@ if (cli.from && cli.to) {
 } else if (cli.link) {
     nsyrc.link();
 } else if (cli.unlink) {
-    nsyrc.unlink();
+    nsyrc.unlink(cli.unlink);
 } else if (cli.show) {
     nsyrc.show();
 } else if (cli.run) {

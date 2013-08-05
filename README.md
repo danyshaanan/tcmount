@@ -10,3 +10,4 @@ TODO
 * Write proper readme
 * Write tests before refactoring
 * Refactor
+* Add parseInt coercion to cli input when valid

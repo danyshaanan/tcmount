@@ -40,6 +40,8 @@ Removed id #1
 ### Info
 * The links data is saved as json in ~/.nsyrc
 * The default for the dry-run prompt is YES, while the default of the wet-run prompt is NO.
+* Unlinked links are sent into a trash can, which can be emptied with **nsyrc empty** or recovered only by editing ~/.nsyrc (for now).
+
 
 ### TODOs
 
@@ -48,3 +50,4 @@ Removed id #1
 * Add option to set specific rsync flags for specific links
 * Add flag to skip dry-run and/or prompt
 * Write tests
+* Consider implementing **nsryc restore** for restoring unlinked links from the trash

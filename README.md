@@ -43,7 +43,7 @@ Removed id #1
 
 ### TODOs
 
-* Format last-synced field be human readable
+* Make periods of time by which last-synced is colored configurable
 * Add an **nsyrc pull/push** command which will run the link which has `pwd` as target/source
 * Add option to set specific rsync flags for specific links
 * Add flag to skip dry-run and/or prompt

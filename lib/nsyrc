@@ -18,6 +18,7 @@ cli
     .option("empty", "remove all unlinked links from the trash")
     .option("show", "prints the nsyrc links for the current folder",Boolean, false)
     .option("run [id]", "run a link")
+    .option("wet", "skip dry-runs")
     .parse(process.argv);
 
 
@@ -32,7 +33,7 @@ if (cli.from && cli.to) {
 } else if (cli.show) {
     nsyrc.show();
 } else if (cli.run) {
-    nsyrc.run(cli.run);
+    nsyrc.run(cli.run, cli.wet);
 } else {
     nsyrc.show();
 }

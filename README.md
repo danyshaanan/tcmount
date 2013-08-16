@@ -48,7 +48,7 @@ Removed id #1
 * Make periods of time by which last-synced is colored configurable
 * Add an **nsyrc pull/push** command which will run the link which has `pwd` as target/source
 * Add option to set specific rsync flags for specific links
-* Add flag to skip dry-run and/or prompt
+* Add a flag to skip prompt?
 * Write tests
 * Consider implementing **nsryc restore** for restoring unlinked links from the trash
 * Think of some kind of grouping or priority for links. At a large amount it's getting messy

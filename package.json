@@ -1,7 +1,7 @@
 {
   "name": "nsyrc",
   "main": "./lib/nsyrc",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "A command line tool for easily defining and maintaining rsync backups",
   "repository": {
     "type": "git",

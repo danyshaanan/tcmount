@@ -15,6 +15,7 @@ cli
     .option("from <path>", "source of a new link")
     .option("to <path>", "target of a new link")
     .option("unlink [id]", "remove a link")
+    .option("empty", "remove all unlinked links from the trash")
     .option("show", "Prints the nsyrc links for the current folder",Boolean, false)
     .option("run [id]", "Run a link")
     .parse(process.argv);
@@ -26,6 +27,8 @@ if (cli.from && cli.to) {
     nsyrc.createLink();
 } else if (cli.unlink) {
     nsyrc.unlink(cli.unlink);
+} else if (cli.empty) {
+    nsyrc.emptyTrash();
 } else if (cli.show) {
     nsyrc.show();
 } else if (cli.run) {

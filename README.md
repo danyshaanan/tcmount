@@ -27,7 +27,7 @@ Execute a link with **nsyrc run [id]**:
 ```bash
 $ nsyrc run 1
 rsync /Users/dany/aFolderInYourHome/ /Users/dany/anotherFolderInYourHome/ -Phavyx --delete-after --dry-run
-Execute command? :  [N/y]
+Execute command? :  [no/YES]
 ```
 After the dry run will complete, you will be prompt to execute the command without --dry-run.
 
@@ -38,7 +38,8 @@ Removed id #1
 ```
 
 ### Info
-The links data is saved as json in ~/.nsyrc
+* The links data is saved as json in ~/.nsyrc
+* The default for the dry-run prompt is YES, while the default of the wet-run prompt is NO.
 
 ### TODOs
 

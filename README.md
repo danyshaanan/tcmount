@@ -14,7 +14,7 @@ Create a link between a source folder and a target folder with **nsyrc link**:
 $ nsyrc link from ~/aFolderInYourHome/ to ~/anotherFolderInYourHome/
 Source: /Users/dany/aFolderInYourHome/
 Target: /Users/dany/anotherFolderInYourHome/
-Link created.
+Link created with id #1
 ```
 
 View existing links with **nsyrc show** or just with **nsyrc**:

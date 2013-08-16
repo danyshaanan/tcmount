@@ -42,7 +42,7 @@ The links data is saved as json in ~/.nsyrc
 
 ### TODOs
 
-* Add last-synced field to links
+* Format last-synced field be human readable
 * Add an **nsyrc pull/push** command which will run the link which has `pwd` as target/source
 * Add option to set specific rsync flags for specific links
 * Add flag to skip dry-run and/or prompt

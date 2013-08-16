@@ -21,9 +21,9 @@ cli
 
 
 if (cli.from && cli.to) {
-    nsyrc.link(cli.from, cli.to);
+    nsyrc.createLink(cli.from, cli.to);
 } else if (cli.link) {
-    nsyrc.link();
+    nsyrc.createLink();
 } else if (cli.unlink) {
     nsyrc.unlink(cli.unlink);
 } else if (cli.show) {

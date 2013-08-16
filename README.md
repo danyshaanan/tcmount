@@ -45,7 +45,6 @@ Removed id #1
 
 ### TODOs
 
-* Change color of non-existing folders to something less strong than red
 * Make periods of time by which last-synced is colored configurable
 * Add an **nsyrc pull/push** command which will run the link which has `pwd` as target/source
 * Add option to set specific rsync flags for specific links

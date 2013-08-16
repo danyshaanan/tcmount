@@ -20,7 +20,7 @@ Link created.
 View existing links with **nsyrc show** or just with **nsyrc**:
 ```bash
 $ nsyrc
-1 : /Users/username/aFolderInYourHome/ ---> /Users/username/anotherFolderInYourHome/
+1 : /Users/username/aFolderInYourHome/ ---> /Users/username/anotherFolderInYourHome/ (Never synced)
 ```
 
 Execute a link with **nsyrc run [id]**:

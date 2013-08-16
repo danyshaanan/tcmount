@@ -10,19 +10,19 @@ var nsyrc = rek('nsyrc-cli');
 
 cli
     .version(version)
-    .usage("[ show | link [ from <SOURCE> to <TARGET> ] | unlink [id] | run [id] ]")
-    .option("link", "set a new nsyrc link",Boolean, false)
-    .option("from <path>", "source of a new link")
-    .option("to <path>", "target of a new link")
-    .option("unlink [id]", "remove a link")
+    .usage("[ show | link [ from <SOURCE> to <TARGET> ] | unlink [id] | empty | run [id] ]")
+    .option("show", "prints the nsyrc links for the current folder. same as just 'nsyrc'")
+    .option("link", "set a new nsyrc link")
+    .option("from <path>", "source of a new link. works only together with 'link' and 'to'")
+    .option("to <path>", "target of a new link. works only together with 'link' and 'from'")
+    .option("unlink [id]", "remove a link", parseInt)
     .option("empty", "remove all unlinked links from the trash")
-    .option("show", "prints the nsyrc links for the current folder",Boolean, false)
-    .option("run [id]", "run a link")
+    .option("run [id]", "run a link", parseInt)
     .option("wet", "skip dry-runs")
     .parse(process.argv);
 
 
-if (cli.from && cli.to) {
+if (cli.link && cli.from && cli.to) {
     nsyrc.createLink(cli.from, cli.to);
 } else if (cli.link) {
     nsyrc.createLink();

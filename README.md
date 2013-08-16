@@ -51,3 +51,4 @@ Removed id #1
 * Add flag to skip dry-run and/or prompt
 * Write tests
 * Consider implementing **nsryc restore** for restoring unlinked links from the trash
+* Add a command to reassign ids in ~/.nsyrc

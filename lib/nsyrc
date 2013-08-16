@@ -11,13 +11,13 @@ var nsyrc = rek('nsyrc-cli');
 cli
     .version(version)
     .usage("[ show | link [ from <SOURCE> to <TARGET> ] | unlink [id] | run [id] ]")
-    .option("link", "Set a new nsyrc link",Boolean, false)
+    .option("link", "set a new nsyrc link",Boolean, false)
     .option("from <path>", "source of a new link")
     .option("to <path>", "target of a new link")
     .option("unlink [id]", "remove a link")
     .option("empty", "remove all unlinked links from the trash")
-    .option("show", "Prints the nsyrc links for the current folder",Boolean, false)
-    .option("run [id]", "Run a link")
+    .option("show", "prints the nsyrc links for the current folder",Boolean, false)
+    .option("run [id]", "run a link")
     .parse(process.argv);
 
 

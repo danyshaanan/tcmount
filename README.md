@@ -34,7 +34,7 @@ A pending feature will enable the user to set those period of time.
 
 `nsyrc unlink ID` trashes a link. `nsyrc empty` empties the trash. The trash is currently only accessible through opening ~/.nsyrc
 
-Here is the creation of execution of a link, starting without an .nsyrc file:
+Here is the creation and execution of a link, starting with an empty .nsyrc file:
 
 ![nsyrc show, link run, and show again](doc/nsyrc_process_example.png?raw=true)
 
@@ -45,10 +45,14 @@ Here is the creation of execution of a link, starting without an .nsyrc file:
 
 
 ### TODOs
+
 #### Fixes
+
 * Write tests, then refactor some more
 * Sanitize command args before running with .replace(/[^\-a-zA-Z0-9]/g,'')
+
 #### Features
+
 * Make periods of time by which last-synced is colored configurable
 * Add an **nsyrc pull/push** command which will run the link which has `pwd` as target/source
 * Add option to set specific rsync flags for specific links

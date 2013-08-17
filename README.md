@@ -36,6 +36,29 @@ Remove a link with **nsyrc unlink [id]**:
 $ nsyrc unlink 1
 Removed id #1
 ```
+### Example
+
+![Screen shot of a result of `nsyrc show`](doc/nsyrc_example.png?raw=true)
+
+This is the result of running `nsyrc` with [this .nsyrc file](./doc/dot.nsyrc_example).
+
+Each row represent a link. The padded coluoms are, from left to right:
+* id - used with `nsyrc run` or `nsyrc unlink`
+* Source folder
+* Target folder
+* How long ago was it last synced
+
+Folder colors:
+* Green: local existing folder
+* Yellow: remote folders, which are not checked for existance
+* Red: local non-existing folders, probably folders on removeable media
+
+How-Long-Ago colors represent predefined periods of time:
+* White: less than a day
+* Yellow: more than a day and less than a week
+* Red: more than a week
+A pending feature will enable the user to set those period of time.
+
 
 ### Info
 * The links data is saved as json in ~/.nsyrc

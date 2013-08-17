@@ -9,51 +9,12 @@ $ npm install -g nsyrc
 
 ### Usage
 
-Create a link between a source folder and a target folder with `nsyrc link`:
-```bash
-$ nsyrc link from ~/aFolderInYourHome/ to ~/anotherFolderInYourHome/
-Source: /Users/dany/aFolderInYourHome/
-Target: /Users/dany/anotherFolderInYourHome/
-Link created with id #8
-```
-A link will be created only if the folders exists, or are remote folders, like `user@example.com:~/files/`
-
-
-View existing links with `nsyrc show` or just with `nsyrc`:
-```bash
-$ nsyrc
-1: /Users/dany/wip/.................. --> server:/home/dany/backups/wip/............ (a few seconds ago)
-2: /Users/dany/git/.................. --> server:/home/dany/backups/git/............ (18 hours ago).....
-3: dany@server:~/.................... --> /Users/dany/backups/server_users/dany/.... (4 days ago).......
-4: server:~/......................... --> /Users/dany/backups/server_users/ec2-user/ (8 days ago).......
-5: /Users/dany/files/................ --> server:/home/dany/backups/files/.......... (a day ago)........
-6: /Users/dany/files/................ --> /Volumes/1tbdrive/backups/files........... (a day ago)........
-7: /Volumes/1tbdrive/backups/........ --> /Volumes/2tbdrive/backups/................ (a month ago)......
-8: /Users/username/aFolderInYourHome/ --> /Users/username/anotherFolderInYourHome/.. (Never synced).....
-```
-
-
-Execute a link with `nsyrc run [id]`
-```bash
-$ nsyrc run 8
-rsync /Users/dany/aFolderInYourHome/ /Users/dany/anotherFolderInYourHome/ -Phavyx --delete-after --dry-run
-Execute command? :  [no/YES]
-```
-After the dry run will complete, you will be prompt to execute the command without --dry-run.
-
-
-Remove a link with `nsyrc unlink [id]`:
-```bash
-$ nsyrc unlink 8
-Removed id #8
-```
-
-
-### Example
+`nsyrc show` or just `nsyrc` shows you the list of your defined links.
+Here is the result of running `nsyrc` with [this .nsyrc file](./doc/dot.nsyrc_example):
 
 ![Screen shot of a result of `nsyrc show`](doc/nsyrc_example.png?raw=true)
 
-This is the result of running `nsyrc` (same as `nsyrc show`) with [this .nsyrc file](./doc/dot.nsyrc_example). Each row represents a link. The padded columns are, from left to right:
+Each row represents a link. The padded columns are, from left to right:
 * id - used with `nsyrc run` or `nsyrc unlink`
 * Source folder, Target folder, which are marked with these colors:
  * Green: local existing folder
@@ -66,22 +27,27 @@ This is the result of running `nsyrc` (same as `nsyrc show`) with [this .nsyrc f
 
 A pending feature will enable the user to set those period of time.
 
-#### A full cycle of `nsyrc show` -> `nsyrc link` -> `nsyrc run` -> `nsyrc show`:
+
+`nsyrc link` or `nsyrc link from FOLDER1 to FOLDER2` creates a new link.
+
+`nsyrc run ID` prompts the user to run the link with --dry-run first, and then without.
+
+`nsyrc unlink ID` trashes a link. `nsyrc empty` empties the trash. The trash is currently only accessible through opening ~/.nsyrc
+
+Here is the creation of execution of a link, starting without an .nsyrc file:
+
 ![nsyrc show, link run, and show again](doc/nsyrc_process_example.png?raw=true)
 
 
 ### Info
 * The links data is saved as json in ~/.nsyrc
 * The default for the dry-run prompt is YES, while the default of the wet-run prompt is NO.
-* Unlinked links are sent into a trash can, which can be emptied with **nsyrc empty** or recovered only by editing ~/.nsyrc (for now).
 
 
 ### TODOs
-
 #### Fixes
 * Write tests, then refactor some more
 * Sanitize command args before running with .replace(/[^\-a-zA-Z0-9]/g,'')
-
 #### Features
 * Make periods of time by which last-synced is colored configurable
 * Add an **nsyrc pull/push** command which will run the link which has `pwd` as target/source

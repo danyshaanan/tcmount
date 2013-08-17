@@ -45,12 +45,15 @@ Removed id #1
 
 ### TODOs
 
+#### Fixes
+* Write tests, then refactor some more
+* Sanitize command args before running with .replace(/[^\-a-zA-Z0-9]/g,'')
+
+#### Features
 * Make periods of time by which last-synced is colored configurable
 * Add an **nsyrc pull/push** command which will run the link which has `pwd` as target/source
 * Add option to set specific rsync flags for specific links
 * Add a flag to skip prompt?
-* Write tests
 * Consider implementing **nsryc restore** for restoring unlinked links from the trash
 * Think of some kind of grouping or priority for links. At a large amount it's getting messy
 * Add a command to reassign ids in ~/.nsyrc
-* Sanitize command args before running with .replace(/[^\-a-zA-Z0-9]/g,'')

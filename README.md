@@ -53,3 +53,4 @@ Removed id #1
 * Consider implementing **nsryc restore** for restoring unlinked links from the trash
 * Think of some kind of grouping or priority for links. At a large amount it's getting messy
 * Add a command to reassign ids in ~/.nsyrc
+* Sanitize command args before running with .replace(/[^\-a-zA-Z0-9]/g,'')

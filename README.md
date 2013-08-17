@@ -15,6 +15,7 @@ Here is the result of running `nsyrc` with [this .nsyrc file](https://github.com
 ![Screen shot of a result of `nsyrc show`](https://raw.github.com/danyshaanan/nsyrc/master/doc/nsyrc_example.png?raw=true)
 
 Each row represents a link. The padded columns are, from left to right:
+
 * id - used with `nsyrc run` or `nsyrc unlink`
 * Source folder, Target folder, which are marked with these colors:
  * Green: local existing folder
@@ -60,3 +61,7 @@ Here is the creation and execution of a link, starting with an empty .nsyrc file
 * Consider implementing **nsryc restore** for restoring unlinked links from the trash
 * Think of some kind of grouping or priority for links. At a large amount it's getting messy
 * Add a command to reassign ids in ~/.nsyrc
+
+#### Disclaimer
+
+While nsyrc tries to distance the user from the dangers of using rsync directly, it is still a program that runs rsync commands, and that was written by a human being, and no one can guarantee that it is devoid of bugs or unexpected behaviors, therefore use this software at your own risk.

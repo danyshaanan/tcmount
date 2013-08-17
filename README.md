@@ -46,11 +46,12 @@ This is the result of running `nsyrc` (same as `nsyrc show`) with [this .nsyrc f
  * Green: local existing folder
  * Yellow: remote folders, which are not checked for existance
  * Red: local non-existing folders, probably folders on removeable media
-* How long ago it was last synced, which are marked with these colors that represent predefined periods of time:
+* How long ago it was last synced, which is marked with these colors that represent predefined periods of time:
  * White: less than a day
  * Yellow: more than a day and less than a week
  * Red: more than a week
- A pending feature will enable the user to set those period of time.
+
+A pending feature will enable the user to set those period of time.
 
 
 ### Info

@@ -10,9 +10,9 @@ $ npm install -g nsyrc
 ### Usage
 
 `nsyrc show` or just `nsyrc` shows you the list of your defined links.
-Here is the result of running `nsyrc` with [this .nsyrc file](./doc/dot.nsyrc_example):
+Here is the result of running `nsyrc` with [this .nsyrc file](https://github.com/danyshaanan/nsyrc/blob/master/doc/dot.nsyrc_example):
 
-![Screen shot of a result of `nsyrc show`](doc/nsyrc_example.png?raw=true)
+![Screen shot of a result of `nsyrc show`](https://raw.github.com/danyshaanan/nsyrc/master/doc/nsyrc_example.png?raw=true)
 
 Each row represents a link. The padded columns are, from left to right:
 * id - used with `nsyrc run` or `nsyrc unlink`
@@ -36,7 +36,7 @@ A pending feature will enable the user to set those period of time.
 
 Here is the creation and execution of a link, starting with an empty .nsyrc file:
 
-![nsyrc show, link run, and show again](doc/nsyrc_process_example.png?raw=true)
+![nsyrc show, link run, and show again](https://raw.github.com/danyshaanan/nsyrc/master/doc/nsyrc_process_example.png?raw=true)
 
 
 ### Info

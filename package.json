@@ -9,6 +9,7 @@
     "email": "danyshaanan@gmail.com",
     "url": "http://danyshaanan.com/"
   },
+  "contributors": [],
   "licenses": [
     {
       "type": "MIT",
@@ -19,8 +20,13 @@
     "type": "git",
     "url": "git://github.com/danyshaanan/nsyrc.git"
   },
+  "bugs": {
+    "url" : "https://github.com/danyshaanan/nsyrc",
+    "email" : "danyshaanan@gmail.com"
+  },
   "preferGlobal": true,
-  "main": "./lib/nsyrc",
+  "main": "./lib/nsyrc-cli.js",
+  "man" : "./man/doc.1",
   "scripts": {
     "test": "jasmine-node ./test/",
     "start": "node ."

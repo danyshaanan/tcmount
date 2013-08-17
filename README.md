@@ -66,6 +66,9 @@ This is the result of running `nsyrc` (same as `nsyrc show`) with [this .nsyrc f
 
 A pending feature will enable the user to set those period of time.
 
+#### A full cycle of `nsyrc show` -> `nsyrc link` -> `nsyrc run` -> `nsyrc show`:
+![nsyrc show, link run, and show again](doc/nsyrc_process_example.png?raw=true)
+
 
 ### Info
 * The links data is saved as json in ~/.nsyrc

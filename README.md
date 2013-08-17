@@ -42,7 +42,7 @@ Removed id #1
 
 This is the result of running `nsyrc` with [this .nsyrc file](./doc/dot.nsyrc_example).
 
-Each row represent a link. The padded column are, from left to right:
+Each row represents a link. The padded column are, from left to right:
 * id - used with `nsyrc run` or `nsyrc unlink`
 * Source folder
 * Target folder

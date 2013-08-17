@@ -8,34 +8,47 @@ $ npm install -g nsyrc
 ```
 
 ### Usage
-Create a link between a source folder and a target folder with **nsyrc link**:
 
+Create a link between a source folder and a target folder with `nsyrc link`:
 ```bash
 $ nsyrc link from ~/aFolderInYourHome/ to ~/anotherFolderInYourHome/
 Source: /Users/dany/aFolderInYourHome/
 Target: /Users/dany/anotherFolderInYourHome/
-Link created with id #1
+Link created with id #8
 ```
+A link will be created only if the folders exists, or are remote folders, like `user@example.com:~/files/`
 
-View existing links with **nsyrc show** or just with **nsyrc**:
+
+View existing links with `nsyrc show` or just with `nsyrc`:
 ```bash
 $ nsyrc
-1 : /Users/username/aFolderInYourHome/ ---> /Users/username/anotherFolderInYourHome/ (Never synced)
+1: /Users/dany/wip/.................. --> server:/home/dany/backups/wip/............ (a few seconds ago)
+2: /Users/dany/git/.................. --> server:/home/dany/backups/git/............ (18 hours ago).....
+3: dany@server:~/.................... --> /Users/dany/backups/server_users/dany/.... (4 days ago).......
+4: server:~/......................... --> /Users/dany/backups/server_users/ec2-user/ (8 days ago).......
+5: /Users/dany/files/................ --> server:/home/dany/backups/files/.......... (a day ago)........
+6: /Users/dany/files/................ --> /Volumes/1tbdrive/backups/files........... (a day ago)........
+7: /Volumes/1tbdrive/backups/........ --> /Volumes/2tbdrive/backups/................ (a month ago)......
+8: /Users/username/aFolderInYourHome/ --> /Users/username/anotherFolderInYourHome/.. (Never synced).....
 ```
 
-Execute a link with **nsyrc run [id]**:
+
+Execute a link with `nsyrc run [id]`
 ```bash
-$ nsyrc run 1
+$ nsyrc run 8
 rsync /Users/dany/aFolderInYourHome/ /Users/dany/anotherFolderInYourHome/ -Phavyx --delete-after --dry-run
 Execute command? :  [no/YES]
 ```
 After the dry run will complete, you will be prompt to execute the command without --dry-run.
 
-Remove a link with **nsyrc unlink [id]**:
+
+Remove a link with `nsyrc unlink [id]`:
 ```bash
-$ nsyrc unlink 1
-Removed id #1
+$ nsyrc unlink 8
+Removed id #8
 ```
+
+
 ### Example
 
 ![Screen shot of a result of `nsyrc show`](doc/nsyrc_example.png?raw=true)

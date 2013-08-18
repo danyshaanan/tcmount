@@ -62,6 +62,7 @@ Here is the creation and execution of a link, starting with an empty .nsyrc file
 * Consider implementing **nsryc restore** for restoring unlinked links from the trash
 * Think of some kind of grouping or priority for links. At a large amount it's getting messy
 * Add a command to reassign ids in ~/.nsyrc
+* Create a github page
 
 ### Disclaimer
 

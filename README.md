@@ -50,6 +50,7 @@ Here is the creation and execution of a link, starting with an empty .nsyrc file
 #### Fixes
 
 * Write tests, then refactor some more
+* Check that rsync exists before running it, or better yet, include a private version of rsync inside the package
 * Sanitize command args before running with .replace(/[^\-a-zA-Z0-9]/g,'')
 
 #### Features

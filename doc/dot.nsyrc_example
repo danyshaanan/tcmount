@@ -27,21 +27,21 @@
     {
       "source": "/Users/dany/files/",
       "target": "server:/home/dany/backups/files/",
-      "id": 7,
+      "id": 5,
       "lastSynced": 1376600709663
     },
     {
       "source": "/Users/dany/files/",
       "target": "/Volumes/1tbdrive/backups/files",
-      "id": 8,
+      "id": 6,
       "lastSynced": 1376600709663
     },
     {
       "source": "/Volumes/1tbdrive/backups/",
       "target": "/Volumes/2tbdrive/backups/",
-      "id": 9,
+      "id": 7,
       "lastSynced": 1373673107330
     }
   ],
-  "maxid": 11
+  "maxid": 7
 }

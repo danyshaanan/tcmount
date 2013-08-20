@@ -56,7 +56,7 @@ Here is the creation and execution of a link, starting with an empty .nsyrc file
 #### Features
 
 * Make periods of time by which last-synced is colored configurable
-* Implement snapshotting with --link-dest. (Will this work with ec:bu/symlinkeddir/../symlinkeddir/ to circumvent problems with symlinks being on another fs?)
+* Implement --link-dest snapshotting: ``rsync -Phavyx ~/wip/ ec2:bu/wip/../wip_`date +"%y%m%d_%H%M%S"\`/ --link-dest=../wip/``
 * Add an **nsyrc pull/push** command which will run the link with ~`pwd`.indexOf(target/source)
 * Add option to set specific rsync flags for specific links
 * Add a flag to skip prompt?

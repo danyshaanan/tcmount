@@ -56,7 +56,8 @@ Here is the creation and execution of a link, starting with an empty .nsyrc file
 #### Features
 
 * Make periods of time by which last-synced is colored configurable
-* Add an **nsyrc pull/push** command which will run the link which has `pwd` as target/source
+* Implement snapshotting with --link-dest. (Will this work with ec:bu/symlinkeddir/../symlinkeddir/ to circumvent problems with symlinks being on another fs?)
+* Add an **nsyrc pull/push** command which will run the link with ~`pwd`.indexOf(target/source)
 * Add option to set specific rsync flags for specific links
 * Add a flag to skip prompt?
 * Consider implementing **nsryc restore** for restoring unlinked links from the trash

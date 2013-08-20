@@ -2,11 +2,12 @@
 ## A command line tool for easily defining and maintaining rsync backups
 nsyrc lets you save links between source and target folders, and rsync easily between them.
 
+* * *
 ### Installation
 ```bash
 $ npm install -g nsyrc
 ```
-
+* * *
 ### Usage
 
 `nsyrc show` or just `nsyrc` shows you the list of your defined links.
@@ -39,12 +40,12 @@ Here is the creation and execution of a link, starting with an empty .nsyrc file
 
 ![nsyrc show, link run, and show again](https://raw.github.com/danyshaanan/nsyrc/master/doc/nsyrc_process_example.png?raw=true)
 
-
+* * *
 ### Info
 * The links data is saved as json in ~/.nsyrc
 * The default for the dry-run prompt is YES, while the default of the wet-run prompt is NO.
 
-
+* * *
 ### TODOs
 
 #### Fixes
@@ -65,6 +66,7 @@ Here is the creation and execution of a link, starting with an empty .nsyrc file
 * Add a command to reassign ids in ~/.nsyrc
 * Create a github page
 
+* * *
 ### Disclaimer
 
 While nsyrc tries to distance the user from the dangers of using rsync directly, it is still a program that runs rsync commands, and that was written by a human being, and no one can guarantee that it is devoid of bugs or unexpected behaviors, therefore use this software at your own risk.

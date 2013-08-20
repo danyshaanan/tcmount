@@ -48,23 +48,9 @@ Here is the creation and execution of a link, starting with an empty .nsyrc file
 * * *
 ### TODOs
 
-#### Fixes
-
-* Write tests, then refactor some more
-* Check that rsync exists before running it, or better yet, include a private version of rsync inside the package
-* Sanitize command args before running with .replace(/[^\-a-zA-Z0-9]/g,'')
-
-#### Features
-
-* Make periods of time by which last-synced is colored configurable
-* Implement --link-dest snapshotting: ``rsync -Phavyx ~/wip/ ec2:bu/wip/../wip_`date +"%y%m%d_%H%M%S"\`/ --link-dest=../wip/``
-* Add an **nsyrc pull/push** command which will run the link with ~`pwd`.indexOf(target/source)
-* Add option to set specific rsync flags for specific links
-* Add a flag to skip prompt?
-* Consider implementing **nsryc restore** for restoring unlinked links from the trash
-* Think of some kind of grouping or priority for links. At a large amount it's getting messy
-* Add a command to reassign ids in ~/.nsyrc
+* Write tests
 * Create a github page
+* [Close open issues](https://github.com/danyshaanan/nsyrc/issues)
 
 * * *
 ### Disclaimer

@@ -4,7 +4,7 @@
 
 var cli = require('commander');
 var rek = require('rekuire');
-var version = require('../package.json').version;
+var version = rek('package.json').version;
 
 var nsyrc = rek('nsyrc-cli');
 

@@ -12,7 +12,7 @@ cli
     .version(version)
     .usage("[ gui | show | link [ from <SOURCE> to <TARGET> ] | unlink [id] | empty | run [id] ]")
     .option("-g, gui", "start web interface for nsyrc in your default browser")
-    .option("show", "prints the nsyrc links for the current folder. same as just 'nsyrc'")
+    .option("show", "print the nsyrc links for the current folder. same as just 'nsyrc'")
     .option("link", "set a new nsyrc link")
     .option("from <path>", "source of a new link. works only together with 'link' and 'to'")
     .option("to <path>", "target of a new link. works only together with 'link' and 'from'")

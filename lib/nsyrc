@@ -36,7 +36,9 @@ if (cli.link && cli.from && cli.to) {
 } else if (cli.run) {
     nsyrc_cli.run(cli.run, cli.wet);
 } else if (cli.gui) {
-    rek('nsyrc-gui').start();
+    rek('nsyrc-gui').start({
+        version: version
+    });
 } else {
     cli.help();
 }

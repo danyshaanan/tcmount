@@ -59,7 +59,7 @@ $(function() {
     $output.html('... ');
   });
 
-  return;
+  var socket = io.connect('http://localhost:8080');
 
   socket.on('version', function(data) {
     $titles.html('nsyrc v' + data.version);
@@ -80,21 +80,6 @@ $(function() {
   });
 
 });
-
-///////////////////////////////
-
-var socket = io.connect('http://localhost:8080');
-
-function ask(question) {
-  socket.emit('question', { question: question });
-}
-
-socket.on('answer', function (data) {
-  console.log(data.answer);
-});
-
-ask("wat??");
-
 
 </script>
 </head>

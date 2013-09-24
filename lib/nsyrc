@@ -6,7 +6,7 @@ var cli = require('commander');
 var rek = require('rekuire');
 var version = rek('package.json').version;
 
-var nsyrc = rek('nsyrc-cli');
+var nsyrc_cli = rek('nsyrc-cli');
 
 cli
     .version(version)
@@ -23,17 +23,17 @@ cli
 
 
 if (cli.link && cli.from && cli.to) {
-    nsyrc.createLink(cli.from, cli.to);
+    nsyrc_cli.createLink(cli.from, cli.to);
 } else if (cli.link) {
-    nsyrc.createLink();
+    nsyrc_cli.createLink();
 } else if (cli.unlink) {
-    nsyrc.unlink(cli.unlink);
+    nsyrc_cli.unlink(cli.unlink);
 } else if (cli.empty) {
-    nsyrc.emptyTrash();
+    nsyrc_cli.emptyTrash();
 } else if (cli.show) {
-    nsyrc.show();
+    nsyrc_cli.show();
 } else if (cli.run) {
-    nsyrc.run(cli.run, cli.wet);
+    nsyrc_cli.run(cli.run, cli.wet);
 } else {
-    nsyrc.show();
+    nsyrc_cli.show();
 }

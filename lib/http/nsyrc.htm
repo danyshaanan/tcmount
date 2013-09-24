@@ -79,6 +79,10 @@ $(function() {
     socket.emit('run', { id: id });
   });
 
+  window.onunload = function(){
+    socket.emit('exit');
+  };
+
 });
 
 </script>

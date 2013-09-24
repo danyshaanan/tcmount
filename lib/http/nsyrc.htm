@@ -35,7 +35,7 @@ span.editlinks, div#newversion { display: none; }
 
 function formatLinks(data) {
   return "<table><tr><td>" + data.links.map(function(v, i) {
-    return [v.id, v.source, v.target, v.lastSynced, "<span class='run' id='" + v.id + "'>Run</span><span class='delete' id='" + v.id + "'>Delete</span>"].join('</td><td>');
+    return [v.id, v.source, v.target, v.ago, "<span class='run' id='" + v.id + "'>Run</span><span class='delete' id='" + v.id + "'>Delete</span>"].join('</td><td>');
   }).join('</td></tr><tr><td>') + "</td></tr></table>";
 }
 

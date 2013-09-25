@@ -33,12 +33,6 @@ span.editlinks, div#newversion { display: none; }
 <script type='text/javascript' src="http://localhost:8080/jquery-2.0.3.min.map"></script>
 <script type='text/javascript'>
 
-function formatLinks(data) {
-  return "<table><tr><td>" + data.links.map(function(v, i) {
-    return [v.id, v.source, v.target, v.ago, "<span class='run' id='" + v.id + "'>Run</span><span class='delete' id='" + v.id + "'>Delete</span>"].join('</td><td>');
-  }).join('</td></tr><tr><td>') + "</td></tr></table>";
-}
-
 function appendOutput(el, string) {
   var scroll = el.scrollTop / (el.scrollHeight - el.clientHeight);
   $(el).append(string);
@@ -67,7 +61,7 @@ $(function() {
     $titles.html('nsyrc v' + data.version);
   });
   socket.on('links', function(data) {
-    $links.html(formatLinks(data));
+    $links.html(data.table);
   });
   socket.on('output', function(data) {
     appendOutput($output[0], data.output);

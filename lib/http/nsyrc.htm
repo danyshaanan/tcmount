@@ -67,10 +67,22 @@ $(function() {
   socket.on('version', function(data) {
     $titles.html('nsyrc v' + data.version);
   });
+
   socket.on('links', function(data) {
     $links.html(data.table);
     $refresh.fadeTo(200, 1);
+
+    $('span.dry').click(function() {
+      var id = $(this).attr('id');
+      socket.emit('dry', { id: id });
+    });
+
+    $('span.wet').click(function() {
+      var id = $(this).attr('id');
+      socket.emit('wet', { id: id });
+    });
   });
+
   socket.on('output', function(data) {
     appendOutput($output[0], data.output);
   });
@@ -78,10 +90,6 @@ $(function() {
   socket.emit('getVersion');
   socket.emit('getLinks');
 
-  $('span.run').click(function() {
-    var id = $(this).attr('id');
-    socket.emit('run', { id: id });
-  });
 
   $refresh.click(function() {
     socket.emit('getLinks');

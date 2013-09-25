@@ -16,7 +16,7 @@ a:hover                      { color: inherit; text-decoration: underline; }
 div#output::-webkit-scrollbar { -webkit-appearance: none; width: 7px; }
 div#output::-webkit-scrollbar-thumb { border-radius: 4px; background-color: rgba(0,0,0,.5); }
 div#output { height: 400px; overflow: scroll; }
-span.run, span#clearoutput, span#create, span.editlinks, span.delete { text-decoration: underline; cursor: pointer; font-weight: bold; } /*this should be done better*/
+span.run, span#clearoutput, span#create, span.editlinks, span.delete, span.refresh { text-decoration: underline; cursor: pointer; font-weight: bold; } /*this should be done better*/
 
 /********** Logic  **********/
 
@@ -53,6 +53,7 @@ $(function() {
   var $output = $('div#output');
   var $titles = $('title, a#title');
   var $links = $('div#links');
+  var $refresh = $('span.refresh');
 
   $('span.editlinks').click(function() {
     $toggled.toggle();
@@ -68,6 +69,7 @@ $(function() {
   });
   socket.on('links', function(data) {
     $links.html(data.table);
+    $refresh.fadeTo(200, 1);
   });
   socket.on('output', function(data) {
     appendOutput($output[0], data.output);
@@ -79,6 +81,11 @@ $(function() {
   $('span.run').click(function() {
     var id = $(this).attr('id');
     socket.emit('run', { id: id });
+  });
+
+  $refresh.click(function() {
+    socket.emit('getLinks');
+    $refresh.fadeTo(200, 0.2);
   });
 
   window.onunload = function(){
@@ -103,6 +110,7 @@ $(function() {
 
 <section>
   <h4>Links</h4>
+  <span class='refresh'>Refresh<br /></span> <br />
   <span class='editlinks'>Edit links<br /></span>
   <span class='editlinks back'>Go back<br /></span>
   <br />

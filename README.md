@@ -23,6 +23,8 @@ $ npm install -g tcmount
 
 `tcmount <filename or mountpoint or another string>` will search your links for a fitting one, and mount it.
 
+`tcmount -u <id>` will unmount the link with that id.
+
 `tcmount -u <filename or mountpoint or another string>` will search your links for a fitting one, and unmount it.
 
 `tcmount -t <id>` will remove the link with that id.
@@ -31,3 +33,8 @@ $ npm install -g tcmount
 ### Info
 * The links data is saved as json in ~/.tcmount
 * No support for key files or hidden volumes.
+* Not tested in Linux.
+
+* * *
+### TODOs
+* Check and show which links are mounted.

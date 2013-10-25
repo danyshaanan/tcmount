@@ -30,13 +30,10 @@ Here are a few commands, in an environment with [this .tcmount file](https://git
 
 ![Screen shot some `tcmount` commands](https://raw.github.com/danyshaanan/tcmount/master/doc/tcmount_example.png?raw=true)
 
+Green means mounted, yellow means existing but not mounted, and red means missing.
 
 * * *
 ### Info
 * The links data is saved as json in ~/.tcmount
 * No support for key files or hidden volumes.
 * Not tested in Linux.
-
-* * *
-### TODOs
-* Check and show which links are mounted.

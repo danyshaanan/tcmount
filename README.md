@@ -23,7 +23,7 @@ $ npm install -g tcmount
 
 `tcmount <filename or mountpoint or another string>` will search your links for a fitting one, and mount it.
 
-`tcmount -u <file>` or `tcmount -u <mountpoint>` will unmount the pair.
+`tcmount -u <filename or mountpoint or another string>` will search your links for a fitting one, and unmount it.
 
 `tcmount -t <id>` will remove the link with that id.
 

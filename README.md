@@ -37,3 +37,12 @@ Green means mounted, yellow means existing but not mounted, and red means missin
 * The links data is saved as json in ~/.tcmount
 * No support for key files or hidden volumes.
 * Not tested in Linux.
+
+* * *
+### Notes
+```bash
+alias tm='tcmount'
+alias tu='tcmount -u'
+```
+
+

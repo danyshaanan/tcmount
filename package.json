@@ -1,9 +1,9 @@
 {
-  "name": "nsyrc",
-  "version": "0.0.12",
-  "description": "A command line tool for easily defining and maintaining rsync backups",
-  "keywords": ["rsync", "nsyrc", "cli", "backup"],
-  "homepage": "https://github.com/danyshaanan/nsyrc",
+  "name": "tcmount",
+  "version": "0.0.0",
+  "description": "A command line tool for mounting and dismounting TrueCrypt volumes",
+  "keywords": ["truecrypt", "mount", "cli", "security", "encryption", "tcmount"],
+  "homepage": "https://github.com/danyshaanan/tcmount",
   "author": {
     "name": "Dany Shaanan",
     "email": "danyshaanan@gmail.com",
@@ -13,36 +13,33 @@
   "licenses": [
     {
       "type": "MIT",
-      "url": "https://github.com/danyshaanan/nsyrc/blob/master/LICENSE"
+      "url": "https://github.com/danyshaanan/tcmount/blob/master/LICENSE"
     }
   ],
   "repository": {
     "type": "git",
-    "url": "git://github.com/danyshaanan/nsyrc.git"
+    "url": "git://github.com/danyshaanan/tcmount.git"
   },
   "bugs": {
-    "url" : "https://github.com/danyshaanan/nsyrc",
+    "url" : "https://github.com/danyshaanan/tcmount",
     "email" : "danyshaanan@gmail.com"
   },
   "preferGlobal": true,
-  "main": "./lib/nsyrc-cli.js",
+  "main": "./lib/tcmount-cli.js",
   "man" : "./man/doc.1",
   "scripts": {
     "test": "jasmine-node ./test/",
     "start": "node ."
   },
   "bin": {
-      "nsyrc" : "./lib/nsyrc"
+      "tcmount" : "./lib/tcmount"
   },
   "dependencies": {
     "rekuire": "*",
     "cli-color": "*",
     "commander": "*",
     "read": "*",
-    "moment": "*",
-    "express": "*",
-    "socket.io": "*",
-    "open": "*"
+    "moment": "*"
   },
   "devDependencies": {
       "proxyquire": "*"

@@ -1,23 +1,23 @@
-# nsyrc
-## A command line tool for easily defining and maintaining rsync backups
-nsyrc lets you save links between source and target folders, and rsync easily between them.
+# tcmount
+## A command line tool for mounting and dismounting TrueCrypt volumes
+tcmount lets you save links between truecrypt volumes and mount points, and mount and dismount them easily.
 
 * * *
 ### Installation
 ```bash
-$ npm install -g nsyrc
+$ npm install -g tcmount
 ```
 * * *
 ### Usage
 
-`nsyrc show` or just `nsyrc` shows you the list of your defined links.
-Here is the result of running `nsyrc` with [this .nsyrc file](https://github.com/danyshaanan/nsyrc/blob/master/doc/dot.nsyrc_example):
+`tcmount` shows you the list of your defined links.
+<!-- Here is the result of running `tcmount` with [this .tcmount file](https://github.com/danyshaanan/tcmount/blob/master/doc/dot.tcmount_example): -->
 
-![Screen shot of a result of `nsyrc show`](https://raw.github.com/danyshaanan/nsyrc/master/doc/nsyrc_example.png?raw=true)
+<!-- ![Screen shot of a result of `tcmount show`](https://raw.github.com/danyshaanan/tcmount/master/doc/tcmount_example.png?raw=true) -->
 
-Each row represents a link. The padded columns are, from left to right:
+<!-- Each row represents a link. The padded columns are, from left to right: -->
 
-* id - used with `nsyrc run` or `nsyrc unlink`
+<!-- * id - used with `tcmount run` or `tcmount unlink`
 * Source folder, Target folder, which are marked with these colors:
  * Green: local existing folder
  * Yellow: remote folders, which are not checked for existance
@@ -25,34 +25,30 @@ Each row represents a link. The padded columns are, from left to right:
 * How long ago it was last synced, which is marked with these colors that represent predefined periods of time:
  * White: less than a day
  * Yellow: more than a day and less than a week
- * Red: more than a week
+ * Red: more than a week -->
 
-A pending feature will enable the user to set those period of time.
+<!-- A pending feature will enable the user to set those period of time. -->
 
 
-`nsyrc link` or `nsyrc link from FOLDER1 to FOLDER2` creates a new link.
+`tcmount <file> <mountpoint>` will mount the file onto the mountpoint. use the -l flag to also create a link for that pair.
 
-`nsyrc run ID` prompts the user to run the link with --dry-run first, and then without.
+`tcmount <file>` will mount the file if there is a link that includes it, or ask the user for a mount point.
 
-`nsyrc unlink ID` trashes a link. `nsyrc empty` empties the trash. The trash is currently only accessible through opening ~/.nsyrc
+`tcmount -u <file>` or `tcmount -u <mountpoint>` will unmount the pair.
 
-Here is the creation and execution of a link, starting with an empty .nsyrc file:
+`tcmount -t <file>` or `tcmount -f <mountpoint>` will remove the link for that pair.
 
-![nsyrc show, link run, and show again](https://raw.github.com/danyshaanan/nsyrc/master/doc/nsyrc_process_example.png?raw=true)
+<!-- Here is the creation and execution of a link, starting with an empty .tcmount file: -->
+
+<!-- ![tcmount show, link run, and show again](https://raw.github.com/danyshaanan/tcmount/master/doc/tcmount_process_example.png?raw=true) -->
 
 * * *
 ### Info
-* The links data is saved as json in ~/.nsyrc
-* The default for the dry-run prompt is YES, while the default of the wet-run prompt is NO.
+* The links data is saved as json in ~/.tcmount
 
-* * *
+<!-- * * *
 ### TODOs
 
 * Write tests
 * Create a github page
-* [Close open issues](https://github.com/danyshaanan/nsyrc/issues)
-
-* * *
-### Disclaimer
-
-While nsyrc tries to distance the user from the dangers of using rsync directly, it is still a program that runs rsync commands, and that was written by a human being, and no one can guarantee that it is devoid of bugs or unexpected behaviors, therefore use this software at your own risk.
+* [Close open issues](https://github.com/danyshaanan/tcmount/issues) -->

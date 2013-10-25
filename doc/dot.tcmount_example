@@ -1,0 +1,25 @@
+{
+  "links": [
+    {
+      "file": "/Users/dany/ssh.tc",
+      "mountpoint": "/Users/dany/.ssh",
+      "id": 1
+    },
+    {
+      "file": "/Users/dany/chrome.user.tc",
+      "mountpoint": "/Users/dany/Library/Application Support/Google/Chrome/Default",
+      "id": 2
+    },
+    {
+      "file": "/Users/dany/top.secret.tc",
+      "mountpoint": "/Users/dany/tc/temp",
+      "id": 3
+    },
+    {
+      "file": "/Volumes/1gbHD/500gb.tc",
+      "mountpoint": "/Volumes/1gbHD/moun.tc",
+      "id": 4
+    }
+  ],
+  "maxid": 4
+}

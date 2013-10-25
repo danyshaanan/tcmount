@@ -11,9 +11,6 @@ $ npm install -g tcmount
 ### Usage
 
 `tcmount` shows you the list of your defined links, including their ids.
-<!-- Here is the result of running `tcmount` with [this .tcmount file](https://github.com/danyshaanan/tcmount/blob/master/doc/dot.tcmount_example): -->
-
-<!-- ![Screen shot of a result of `tcmount`](https://raw.github.com/danyshaanan/tcmount/master/doc/tcmount_example.png?raw=true) -->
 
 `tcmount <file> <mountpoint>` will mount the file onto the mountpoint.
 
@@ -28,6 +25,11 @@ $ npm install -g tcmount
 `tcmount -u <filename or mountpoint or another string>` will search your links for a fitting one, and unmount it.
 
 `tcmount -t <id>` will remove the link with that id.
+
+Here are a few commands, in an environment with [this .tcmount file](https://github.com/danyshaanan/tcmount/blob/master/doc/dot.tcmount_example):
+
+![Screen shot some `tcmount` commands](https://raw.github.com/danyshaanan/tcmount/master/doc/tcmount_example.png?raw=true)
+
 
 * * *
 ### Info

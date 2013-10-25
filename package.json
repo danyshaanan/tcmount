@@ -37,11 +37,6 @@
   "dependencies": {
     "rekuire": "*",
     "cli-color": "*",
-    "commander": "*",
-    "read": "*",
-    "moment": "*"
-  },
-  "devDependencies": {
-      "proxyquire": "*"
+    "commander": "*"
   }
 }

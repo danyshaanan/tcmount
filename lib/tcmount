@@ -15,7 +15,7 @@ cli
     .option("-l, --link", "create a link from <file> to <mountpoint>")
     .option("-m, --mount", "mount by file, mountpoint, or link id")
     .option("-u, --unmount", "unmount by file, mountpoint, or link id")
-    .option("-t <id>, --trash", "delete a link by id", parseInt)
+    .option("-t, --trash <id>", "delete a link by id", parseInt)
     .parse(process.argv);
 
 
@@ -27,13 +27,11 @@ if (targets.length > 2) {
 
 if (cli.link) {
     tcmount_cli.createLink(targets);
-} else if (cli.mount) {
-    tcmount_cli.mount(targets);
-} else if (cli.unmount) {
-    tcmount_cli.unmount(targets);
 } else if (cli.trash) {
     tcmount_cli.trash(cli.trash);
-} else if (targets.length > 0) {
+} else if (cli.unmount) {
+    tcmount_cli.unmount(targets);
+} else if (cli.mount || targets.length > 0) {
     tcmount_cli.mount(targets);
 } else {
     tcmount_cli.show();

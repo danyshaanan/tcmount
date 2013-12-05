@@ -49,6 +49,6 @@ alias tu='tcmount -u'
 * * *
 ### Feedback
 * I'd love to get any feedback you might have, to my email address, which is my username at gmail dot com.
-* More material appreciation is welcome in the form of bitcons, to the address in [this page](http://danyshaanan.com/bitcoin).
+* More material appreciation is welcome in the form of bitcoins, to the address in [this page](http://danyshaanan.com/bitcoin).
 
 

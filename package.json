@@ -1,6 +1,6 @@
 {
   "name": "tcmount",
-  "version": "0.0.12",
+  "version": "0.0.13",
   "description": "A command line tool for mounting and dismounting TrueCrypt volumes",
   "keywords": ["truecrypt", "mount", "cli", "security", "encryption", "tcmount"],
   "homepage": "https://github.com/danyshaanan/tcmount",

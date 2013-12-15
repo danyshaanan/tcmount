@@ -49,6 +49,6 @@ alias tu='tcmount -u'
 * * *
 ### Feedback
 * If you enjoyed this tool, please star it on Github!
-* I'd love to get any feedback you might have, to my email address, which is my username at gmail dot com, or through Github if it's about the technicalities.
+* I'd love to get any feedback you might have! Mail me at danyshaanan@gmail.com, or [open an issue](https://github.com/danyshaanan/tcmount/issues/new).
 * More material appreciation is welcome in the form of bitcoins. My address can be found on [this page](http://danyshaanan.com/bitcoin).
 

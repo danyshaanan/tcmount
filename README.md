@@ -47,8 +47,18 @@ alias tu='tcmount -u'
 ```
 
 * * *
+### Download
+
+To download a local copy, run
+
+`npm pack tcmount`
+
+This will download a file that you can always install with:
+
+`npm install <FILENAME>`
+
+* * *
 ### Feedback
 * If you enjoyed this tool, please star it on Github!
 * I'd love to get any feedback you might have! Mail me at danyshaanan@gmail.com, or [open an issue](https://github.com/danyshaanan/tcmount/issues/new).
 * More material appreciation is welcome in the form of bitcoins. My address can be found on [this page](http://danyshaanan.com/bitcoin).
-

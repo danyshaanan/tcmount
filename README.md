@@ -28,6 +28,8 @@ Green files or folders are mounted, yellow are not, and red do not exist at the 
 
 `tcmount <file> <mountpoint>` can be used to mount a file to a mountpoint without having it in your settings.
 
+`tcmount -o <id>` will open the link's target folder.
+
 Here is a flow of a few commands:
 
 ![Screen shot some tcmount commands](https://raw.github.com/danyshaanan/tcmount/master/doc/tcmount_process_example.png?raw=true)

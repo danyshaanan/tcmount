@@ -18,6 +18,7 @@ cli
   .option("-u, --unmount", "unmount by file, mountpoint, or link id")
   .option("-t, --trash <id>", "delete a link by id", parseInt)
   .option("-d, --data", "get system data on all mounted volumes (truecrypt -t -l)")
+  .option("-o, --open <id>", "open link target folder", parseInt)
   .parse(process.argv);
 
 
@@ -27,7 +28,9 @@ if (targets.length > 2) {
   return console.log(clc.red("Too many arguments!! Besides flags, there can't be more than two."));
 }
 
-if (cli.link) {
+if (cli.open) {
+  tcmount_cli.openLink(targets);
+} else if (cli.link) {
   tcmount_cli.createLink(targets);
 } else if (cli.trash) {
   tcmount_cli.trash(cli.trash);

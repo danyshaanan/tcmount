@@ -37,7 +37,8 @@
   "dependencies": {
     "rekuire": "*",
     "cli-color": "*",
-    "commander": "*"
+    "commander": "*",
+    "columnify": "~1.1.0"
   },
   "devDependencies": {
     "grunt": "~0.4.4",

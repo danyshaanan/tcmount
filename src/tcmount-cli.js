@@ -19,6 +19,7 @@ cli
   .option('-t, --trash <id>', 'delete a link by id', parseInt)
   .option('-d, --data', 'get system data on all mounted volumes (truecrypt -t -l)')
   .option('-o, --open <id>', 'open link target folder', parseInt)
+  .option('--no-color', 'disable color in output') //handled by chalk. Prevents commander's "unknown option"
   .parse(process.argv);
 
 

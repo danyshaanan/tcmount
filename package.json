@@ -33,7 +33,6 @@
   },
   "preferGlobal": true,
   "main": "./lib/tcmount.js",
-  "man": "./man/doc.1",
   "scripts": {
     "test": "jasmine-node ./test/",
     "start": "node ."

@@ -19,7 +19,7 @@ Here is the result of `tcmount` in an environment with [this .tcmount file](http
 
 ![Screen shot of `tcmount`](https://raw.github.com/danyshaanan/tcmount/master/doc/tcmount_example.png?raw=true)
 
-Green files or folders are mounted, yellow are not, and red do not exist at the time.
+Green files or folders are mounted, yellow are not, and grey do not exist at the time.
 
 `tcmount <id>` will mount the link with that id.
 

@@ -1,6 +1,6 @@
 'use strict';
 
-var clc = require('cli-color');
+var chalk = require('chalk');
 var fs = require('fs');
 var rek = require('rekuire');
 var tcUtils = rek('tcUtils');
@@ -45,10 +45,10 @@ function pathStatus(path) {
 
 function pathColorFunction(path) {
   var status = pathStatus(path);
-  if (status == PathStatus.UNKNOWN) return clc.white;
-  if (status == PathStatus.MOUNTED) return clc.green;
-  if (status == PathStatus.EXISTS) return clc.yellow;
-  if (status == PathStatus.MISSING) return clc.xterm(52);
+  if (status == PathStatus.UNKNOWN) return chalk.white;
+  if (status == PathStatus.MOUNTED) return chalk.green;
+  if (status == PathStatus.EXISTS) return chalk.yellow;
+  if (status == PathStatus.MISSING) return chalk.gray;
 }
 
 function cliColorPath(path) {
@@ -74,7 +74,7 @@ function getMountedDataAndPrintList(list) {
   tcUtils.checkForTrueCrypt();
   tcUtils.getMountedData(function(err, files, mountpoints) {
     if (err) {
-      console.log(clc.red('error getting mounted information'), err);
+      console.log(chalk.red('error getting mounted information'), err);
     } else {
       mountedData = files.concat(mountpoints);
     }
@@ -86,11 +86,11 @@ function showSystemData() {
   tcUtils.checkForTrueCrypt();
   tcUtils.getMountedData(function(err, files, mountpoints) {
     if (err) {
-      console.log(clc.red('error getting mounted information.\n') + err);
+      console.log(chalk.red('error getting mounted information.\n') + err);
     } else {
       //TODO: change to cliColorPath after getting mounted data correctly
       var list = files.map(function(v, i) {
-        return { id: '?', file: clc.green(files[i]), mountpoint: clc.green(mountpoints[i]) };
+        return { id: '?', file: chalk.green(files[i]), mountpoint: chalk.green(mountpoints[i]) };
       });
       printList(list);
     }

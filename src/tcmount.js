@@ -3,7 +3,7 @@
 var fs = require('fs');
 var path = require('path');
 
-var clc = require('cli-color');
+var chalk = require('chalk');
 var rek = require('rekuire');
 
 var linksData = rek('linksData');
@@ -16,7 +16,7 @@ var shell = rek('shell');
 function resolve(location) {
   var fullPath = path.resolve(location);
   if (!fs.existsSync(fullPath)) {
-    console.log(clc.red('File or mount point does not exists!'));
+    console.log(chalk.red('File or mount point does not exists!'));
     process.exit();
   }
   return fullPath;
@@ -38,11 +38,11 @@ function createLink(targets) {
     var file = resolve(targets[0]);
     var mountpoint = resolve(targets[1]);
 
-    console.log(clc.green('file: ' + file));
-    console.log(clc.green('mountpoint: ' + mountpoint));
+    console.log(chalk.green('file: ' + file));
+    console.log(chalk.green('mountpoint: ' + mountpoint));
     linksData.add({ file: file, mountpoint: mountpoint });
   } else {
-    console.log(clc.red('Wrong number of arguments...'));
+    console.log(chalk.red('Wrong number of arguments...'));
   }
 }
 
@@ -56,10 +56,10 @@ function mount(targets) {
     if (link && typeof link == 'object') {
       actualMount(link.file, link.mountpoint);
     } else {
-      console.log(clc.red('No suitable link found :['));
+      console.log(chalk.red('No suitable link found :['));
     }
   } else {
-    console.log(clc.red('Wrong number of arguments...'));
+    console.log(chalk.red('Wrong number of arguments...'));
   }
 }
 
@@ -68,9 +68,9 @@ function mount(targets) {
 //   if (link && typeof link == 'object') {
 //     // shell('cd', [link.mountpoint], process.exit); // does not work
 //     // process.chdir(link.mountpoint); // does not work
-//     console.log(clc.red('--go not implemented yet :['));
+//     console.log(chalk.red('--go not implemented yet :['));
 //   } else {
-//     console.log(clc.red('No suitable link found :['));
+//     console.log(chalk.red('No suitable link found :['));
 //   }
 // }
 
@@ -82,25 +82,25 @@ function unmount(targets) {
     } else if (typeof link == 'string') {
       actualUnmount(link);
     } else {
-      console.log(clc.red('No suitable link found :['));
+      console.log(chalk.red('No suitable link found :['));
     }
   } else {
-    console.log(clc.red('Wrong number of arguments...'));
+    console.log(chalk.red('Wrong number of arguments...'));
   }
 }
 
 function trash(id) {
   var res = linksData.removeById(parseInt(id));
   if (!res) {
-    return console.log(clc.red('Invalid id or another problem. (id: ' + id + ').'));
+    return console.log(chalk.red('Invalid id or another problem. (id: ' + id + ').'));
   }
-  return console.log(clc.green('Removed id #' + id));
+  return console.log(chalk.green('Removed id #' + id));
 }
 
 function openLink(id) {
   var link = linksData.get(id);
   if (!link) {
-    return console.log(clc.red('no link found for id: ' + id + '.'));
+    return console.log(chalk.red('no link found for id: ' + id + '.'));
   }
   shell({
     darwin: 'open',
@@ -111,7 +111,7 @@ function openLink(id) {
 function show() {
   var all = linksData.all();
   if (all.length === 0) {
-    console.log(clc.yellow('There aren\'t any links defined yet!'));
+    console.log(chalk.yellow('There aren\'t any links defined yet!'));
     return;
   }
   linksDataUtils.getMountedDataAndPrintList(all);

@@ -1,6 +1,6 @@
 'use strict';
 
-var clc = require('cli-color');
+var chalk = require('chalk');
 var rek = require('rekuire');
 var path = require('path');
 var fs = require('fs');
@@ -39,7 +39,7 @@ function add(link) {
     return link.file == v.file && link.mountpoint == v.mountpoint;
   });
   if (dupe) {
-    console.log(clc.red('Link already exists!'));
+    console.log(chalk.red('Link already exists!'));
     return false;
   }
 
@@ -48,7 +48,7 @@ function add(link) {
   links.push(link);
   settings.write('links', links);
   settings.write('maxid', maxid);
-  console.log(clc.green('Link created with id #' + link.id));
+  console.log(chalk.green('Link created with id #' + link.id));
   return true;
 }
 
@@ -104,7 +104,7 @@ function guessLink(hint) {
   if (bySuffix) {
     return bySuffix;
   }
-  console.log(clc.red('What did you mean by that??'));
+  console.log(chalk.red('What did you mean by that??'));
   console.log('Try "tcmount -h" for help.');
   return false;
 }

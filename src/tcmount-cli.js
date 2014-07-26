@@ -3,7 +3,7 @@
 'use strict';
 
 var cli = require('commander');
-var clc = require('cli-color');
+var chalk = require('chalk');
 var rek = require('rekuire');
 var version = rek('package.json').version;
 
@@ -25,7 +25,7 @@ cli
 var targets = process.argv.slice(2).filter(function(v) { return v.indexOf('-') !== 0; });
 
 if (targets.length > 2) {
-  return console.log(clc.red('Too many arguments!! Besides flags, there can\'t be more than two.'));
+  return console.log(chalk.red('Too many arguments!! Besides flags, there can\'t be more than two.'));
 }
 
 if (cli.open) {

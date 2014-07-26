@@ -1,6 +1,6 @@
 'use strict';
 
-var clc = require('cli-color');
+var chalk = require('chalk');
 var exec = require('child_process').exec;
 
 ////////////////////////////////////////////////////////////////////////////////
@@ -8,9 +8,9 @@ var exec = require('child_process').exec;
 function checkForTrueCrypt() {
   exec('which truecrypt', function(err, stdout, stderr) {
     if (err) {
-      console.log(clc.red('You do not seem to have truecrypt available in the path!'));
+      console.log(chalk.red('You do not seem to have truecrypt available in the path!'));
       console.log('If you are using OSX, you might want to symlink truecrypt into the /usr/local/bin :');
-      console.log(clc.yellow('ln -s /Applications/TrueCrypt.app/Contents/MacOS/TrueCrypt /usr/local/bin/truecrypt'));
+      console.log(chalk.yellow('ln -s /Applications/TrueCrypt.app/Contents/MacOS/TrueCrypt /usr/local/bin/truecrypt'));
       console.log('If you are using Linux, it probably means you do not have truecrypt installed.');
       console.log('Aborting...');
       process.exit();

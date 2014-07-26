@@ -32,13 +32,13 @@
     "email": "danyshaanan@gmail.com"
   },
   "preferGlobal": true,
-  "main": "./lib/tcmount.js",
+  "main": "./src/tcmount.js",
   "scripts": {
     "test": "jasmine-node ./test/",
     "start": "node ."
   },
   "bin": {
-    "tcmount": "./lib/tcmount-cli.js"
+    "tcmount": "./src/tcmount-cli.js"
   },
   "dependencies": {
     "rekuire": "*",

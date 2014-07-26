@@ -16,7 +16,7 @@ module.exports = function(grunt) {
     },
     jshint: {
       src: {
-        src: ['lib/**/*.*'],
+        src: ['src/**/*.*'],
         options: {
           node: true,
           unused: 'vars',

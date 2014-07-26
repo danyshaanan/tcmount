@@ -34,7 +34,7 @@
   "preferGlobal": true,
   "main": "./src/tcmount.js",
   "scripts": {
-    "test": "jasmine-node ./test/",
+    "test": "faucet",
     "start": "node ."
   },
   "bin": {
@@ -50,6 +50,8 @@
     "grunt": "~0.4.4",
     "grunt-contrib-jshint": "~0.10.0",
     "grunt-contrib-clean": "~0.5.0",
-    "grunt-githooks": "~0.3.1"
+    "grunt-githooks": "~0.3.1",
+    "faucet": "0.0.1",
+    "tape": "~2.13.4"
   }
 }

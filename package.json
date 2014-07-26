@@ -2,7 +2,14 @@
   "name": "tcmount",
   "version": "0.0.16",
   "description": "A command line tool for mounting and dismounting TrueCrypt volumes",
-  "keywords": ["truecrypt", "mount", "cli", "security", "encryption", "tcmount"],
+  "keywords": [
+    "truecrypt",
+    "mount",
+    "cli",
+    "security",
+    "encryption",
+    "tcmount"
+  ],
   "homepage": "https://github.com/danyshaanan/tcmount",
   "author": {
     "name": "Dany Shaanan",
@@ -21,18 +28,18 @@
     "url": "git://github.com/danyshaanan/tcmount.git"
   },
   "bugs": {
-    "url" : "https://github.com/danyshaanan/tcmount",
-    "email" : "danyshaanan@gmail.com"
+    "url": "https://github.com/danyshaanan/tcmount",
+    "email": "danyshaanan@gmail.com"
   },
   "preferGlobal": true,
   "main": "./lib/tcmount.js",
-  "man" : "./man/doc.1",
+  "man": "./man/doc.1",
   "scripts": {
     "test": "jasmine-node ./test/",
     "start": "node ."
   },
   "bin": {
-      "tcmount" : "./lib/tcmount-cli.js"
+    "tcmount": "./lib/tcmount-cli.js"
   },
   "dependencies": {
     "rekuire": "*",

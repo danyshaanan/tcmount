@@ -1,4 +1,7 @@
 # tcmount
+
+[![Build Status](https://travis-ci.org/danyshaanan/tcmount.png?branch=master)](https://travis-ci.org/danyshaanan/tcmount)
+
 ## A command line tool for mounting and dismounting TrueCrypt volumes
 tcmount lets you save links between truecrypt volumes and mount points, and mount and dismount them easily.
 

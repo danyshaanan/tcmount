@@ -44,27 +44,30 @@
     },
     "columnify": {
       "version": "1.1.0",
-      "from": "columnify@",
+      "from": "https://registry.npmjs.org/columnify/-/columnify-1.1.0.tgz",
       "resolved": "https://registry.npmjs.org/columnify/-/columnify-1.1.0.tgz",
       "dependencies": {
         "strip-ansi": {
           "version": "0.2.2",
-          "from": "strip-ansi@^0.2.1",
+          "from": "strip-ansi@0.2.2",
+          "resolved": "https://registry.npmjs.org/strip-ansi/-/strip-ansi-0.2.2.tgz",
           "dependencies": {
             "ansi-regex": {
               "version": "0.1.0",
-              "from": "ansi-regex@^0.1.0"
+              "from": "ansi-regex@0.1.0",
+              "resolved": "https://registry.npmjs.org/ansi-regex/-/ansi-regex-0.1.0.tgz"
             }
           }
         },
         "wcwidth.js": {
           "version": "0.0.4",
-          "from": "wcwidth.js@~0.0.4",
+          "from": "https://registry.npmjs.org/wcwidth.js/-/wcwidth.js-0.0.4.tgz",
           "resolved": "https://registry.npmjs.org/wcwidth.js/-/wcwidth.js-0.0.4.tgz",
           "dependencies": {
             "underscore": {
               "version": "1.6.0",
-              "from": "underscore@>= 1.3.0"
+              "from": "underscore@1.6.0",
+              "resolved": "https://registry.npmjs.org/underscore/-/underscore-1.6.0.tgz"
             }
           }
         }

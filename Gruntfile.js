@@ -4,11 +4,16 @@ module.exports = function(grunt) {
 
   grunt.initConfig({
     pkg: grunt.file.readJSON('package.json'),
-    // githooks: {
-    //   all: {
-    //     'pre-commit': 'jshint'
-    //   }
-    // },
+    githooks: {
+      all: {
+        'pre-commit': 'jshint'
+      }
+    },
+    clean: {
+      githooks: {
+        src: ['.git/hooks/pre-commit']
+      }
+    },
     jshint: {
       src: {
         src: ['lib/**/*.*'],
@@ -29,7 +34,10 @@ module.exports = function(grunt) {
   });
 
   grunt.loadNpmTasks('grunt-contrib-jshint');
-  // grunt.loadNpmTasks('grunt-githooks');
+  grunt.loadNpmTasks('grunt-contrib-clean');
+  grunt.loadNpmTasks('grunt-githooks');
 
-  grunt.registerTask('default', [/*'githooks',*/'jshint']);
+  grunt.registerTask('hook', ['githooks']);
+  grunt.registerTask('unhook', ['clean:githooks']);
+  grunt.registerTask('default', ['jshint']);
 };

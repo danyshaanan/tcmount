@@ -7,7 +7,7 @@ var chalk = require('chalk');
 var rek = require('rekuire');
 var version = rek('package.json').version;
 
-var tcmount_cli = rek('tcmount');
+var tcmount = rek('tcmount');
 
 cli
   .version(version)
@@ -30,19 +30,19 @@ if (targets.length > 2) {
 }
 
 if (cli.open) {
-  tcmount_cli.openLink(targets);
+  tcmount.openLink(targets);
 } else if (cli.link) {
-  tcmount_cli.createLink(targets);
+  tcmount.createLink(targets);
 } else if (cli.trash) {
-  tcmount_cli.trash(cli.trash);
+  tcmount.trash(cli.trash);
 } else if (cli.unmount) {
-  tcmount_cli.unmount(targets);
+  tcmount.unmount(targets);
 // } else if (cli.go) {
-  // tcmount_cli.go(cli.go);
+  // tcmount.go(cli.go);
 } else if (cli.mount || targets.length > 0) {
-  tcmount_cli.mount(targets);
+  tcmount.mount(targets);
 } else if (cli.data) {
-  tcmount_cli.showSystemData();
+  tcmount.showSystemData();
 } else {
-  tcmount_cli.show();
+  tcmount.show();
 }

@@ -2,56 +2,9 @@
   "name": "tcmount",
   "version": "0.0.16",
   "dependencies": {
-    "rekuire": {
-      "version": "0.1.5",
-      "from": "rekuire@0.1.5",
-      "resolved": "https://registry.npmjs.org/rekuire/-/rekuire-0.1.5.tgz",
-      "dependencies": {
-        "underscore": {
-          "version": "1.5.2",
-          "from": "underscore@1.5.2",
-          "resolved": "https://registry.npmjs.org/underscore/-/underscore-1.5.2.tgz"
-        }
-      }
-    },
-    "commander": {
-      "version": "2.1.0",
-      "from": "commander@2.1.0"
-    },
-    "columnify": {
-      "version": "1.1.0",
-      "from": "https://registry.npmjs.org/columnify/-/columnify-1.1.0.tgz",
-      "resolved": "https://registry.npmjs.org/columnify/-/columnify-1.1.0.tgz",
-      "dependencies": {
-        "strip-ansi": {
-          "version": "0.2.2",
-          "from": "strip-ansi@0.2.2",
-          "resolved": "https://registry.npmjs.org/strip-ansi/-/strip-ansi-0.2.2.tgz",
-          "dependencies": {
-            "ansi-regex": {
-              "version": "0.1.0",
-              "from": "ansi-regex@0.1.0",
-              "resolved": "https://registry.npmjs.org/ansi-regex/-/ansi-regex-0.1.0.tgz"
-            }
-          }
-        },
-        "wcwidth.js": {
-          "version": "0.0.4",
-          "from": "https://registry.npmjs.org/wcwidth.js/-/wcwidth.js-0.0.4.tgz",
-          "resolved": "https://registry.npmjs.org/wcwidth.js/-/wcwidth.js-0.0.4.tgz",
-          "dependencies": {
-            "underscore": {
-              "version": "1.6.0",
-              "from": "underscore@1.6.0",
-              "resolved": "https://registry.npmjs.org/underscore/-/underscore-1.6.0.tgz"
-            }
-          }
-        }
-      }
-    },
     "chalk": {
       "version": "0.5.1",
-      "from": "chalk@",
+      "from": "chalk@~0.5.1",
       "dependencies": {
         "ansi-styles": {
           "version": "1.1.0",
@@ -84,6 +37,60 @@
         "supports-color": {
           "version": "0.2.0",
           "from": "supports-color@^0.2.0"
+        }
+      }
+    },
+    "columnify": {
+      "version": "1.2.1",
+      "from": "columnify@~1.2.1",
+      "resolved": "https://registry.npmjs.org/columnify/-/columnify-1.2.1.tgz",
+      "dependencies": {
+        "strip-ansi": {
+          "version": "1.0.0",
+          "from": "strip-ansi@^1.0.0",
+          "resolved": "https://registry.npmjs.org/strip-ansi/-/strip-ansi-1.0.0.tgz",
+          "dependencies": {
+            "ansi-regex": {
+              "version": "0.2.1",
+              "from": "ansi-regex@^0.2.1"
+            }
+          }
+        },
+        "wcwidth": {
+          "version": "1.0.0",
+          "from": "wcwidth@^1.0.0",
+          "resolved": "https://registry.npmjs.org/wcwidth/-/wcwidth-1.0.0.tgz",
+          "dependencies": {
+            "defaults": {
+              "version": "1.0.0",
+              "from": "defaults@^1.0.0",
+              "resolved": "https://registry.npmjs.org/defaults/-/defaults-1.0.0.tgz",
+              "dependencies": {
+                "clone": {
+                  "version": "0.1.17",
+                  "from": "clone@~0.1.5",
+                  "resolved": "https://registry.npmjs.org/clone/-/clone-0.1.17.tgz"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "commander": {
+      "version": "2.3.0",
+      "from": "commander@*",
+      "resolved": "https://registry.npmjs.org/commander/-/commander-2.3.0.tgz"
+    },
+    "rekuire": {
+      "version": "0.1.5",
+      "from": "rekuire@*",
+      "resolved": "https://registry.npmjs.org/rekuire/-/rekuire-0.1.5.tgz",
+      "dependencies": {
+        "underscore": {
+          "version": "1.6.0",
+          "from": "underscore@*",
+          "resolved": "https://registry.npmjs.org/underscore/-/underscore-1.6.0.tgz"
         }
       }
     }

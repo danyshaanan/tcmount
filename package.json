@@ -44,7 +44,7 @@
     "rekuire": "*",
     "chalk": "~0.5.1",
     "commander": "*",
-    "columnify": "~1.1.0"
+    "columnify": "~1.2.1"
   },
   "devDependencies": {
     "grunt": "~0.4.4",

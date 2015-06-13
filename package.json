@@ -1,6 +1,6 @@
 {
   "name": "tcmount",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "A command line tool for mounting and umounting TrueCrypt volumes",
   "keywords": [
     "cli",
@@ -44,8 +44,7 @@
   "engines": {
     "node": ">=0.10.0"
   },
-  "dependencies": {
-  },
+  "dependencies": {},
   "devDependencies": {
     "grunt": "0.4.5",
     "grunt-eslint": "14.0.0"

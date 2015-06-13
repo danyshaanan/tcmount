@@ -1,14 +1,15 @@
 {
   "name": "tcmount",
-  "version": "0.1.0",
-  "description": "A command line tool for mounting and dismounting TrueCrypt volumes",
+  "version": "1.0.0",
+  "description": "A command line tool for mounting and umounting TrueCrypt volumes",
   "keywords": [
-    "truecrypt",
-    "mount",
     "cli",
+    "mount",
+    "unmount",
+    "truecrypt",
+    "privacy",
     "security",
-    "encryption",
-    "tcmount"
+    "encryption"
   ],
   "homepage": "https://github.com/danyshaanan/tcmount",
   "author": {
@@ -17,6 +18,7 @@
     "url": "http://danyshaanan.com/"
   },
   "contributors": [],
+  "license": "MIT",
   "licenses": [
     {
       "type": "MIT",
@@ -32,26 +34,26 @@
     "email": "danyshaanan@gmail.com"
   },
   "preferGlobal": true,
-  "main": "./src/tcmount.js",
   "scripts": {
-    "test": "faucet",
-    "start": "node ."
+    "test": "grunt"
   },
+  "main": "./src/main.js",
   "bin": {
-    "tcmount": "./src/tcmount-cli.js"
+    "tcmount": "./src/bin.js"
+  },
+  "engines": {
+    "node": ">=0.10.0"
   },
   "dependencies": {
-    "rekuire": "*",
-    "chalk": "~1.0.0",
-    "commander": "*",
-    "columnify": "~1.2.1"
   },
   "devDependencies": {
-    "grunt": "~0.4.4",
-    "grunt-contrib-jshint": "~0.10.0",
-    "grunt-contrib-clean": "~0.5.0",
-    "grunt-githooks": "~0.3.1",
-    "faucet": "0.0.1",
-    "tape": "~2.13.4"
-  }
+    "grunt": "0.4.5",
+    "grunt-eslint": "14.0.0"
+  },
+  "maintainers": [
+    {
+      "name": "danyshaanan",
+      "email": "danyshaanan@gmail.com"
+    }
+  ]
 }

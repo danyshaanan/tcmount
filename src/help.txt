@@ -1,0 +1,16 @@
+
+  Usage: BIN [[-vhl] | [-u] [name]]
+
+  Options:
+    -v    Output the version number
+    -h    Output this help message
+    -l    List mounted volumes
+    -u    Unmount pair
+
+  Examples:
+    Use "BIN" to list currently mounted volumes
+    Use "BIN media" to mount ~/.tc/media.tc onto ~/media
+    Use "BIN -u media" to unmount it ~/media
+
+  Reserved names:
+RESERVED

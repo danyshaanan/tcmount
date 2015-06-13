@@ -1,43 +1,16 @@
-'use strict';
+'use strict'
 
-module.exports = function(grunt) {
+module.exports = function (grunt) {
 
   grunt.initConfig({
-    pkg: grunt.file.readJSON('package.json'),
-    githooks: {
+    eslint: {
       all: {
-        'pre-commit': 'jshint'
-      }
-    },
-    clean: {
-      githooks: {
-        src: ['.git/hooks/pre-commit']
-      }
-    },
-    jshint: {
-      src: {
-        src: ['src/**/*.*'],
-        options: {
-          node: true,
-          unused: 'vars',
-          globalstrict: true,
-          // eqeqeq: true,
-          forin: true,
-          latedef: true,
-          quotmark: 'single',
-          undef: true,
-          trailing: true,
-          lastsemic: true
-        }
+        src: ['src/**/*.js', 'Gruntfile.js']
       }
     }
-  });
+  })
 
-  grunt.loadNpmTasks('grunt-contrib-jshint');
-  grunt.loadNpmTasks('grunt-contrib-clean');
-  grunt.loadNpmTasks('grunt-githooks');
+  grunt.loadNpmTasks('grunt-eslint')
 
-  grunt.registerTask('hook', ['githooks']);
-  grunt.registerTask('unhook', ['clean:githooks']);
-  grunt.registerTask('default', ['jshint']);
-};
+  grunt.registerTask('default', ['eslint'])
+}

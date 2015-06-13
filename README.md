@@ -1,45 +1,49 @@
+:x::x::x::x: NOTICE :x::x::x::x::x:
+
+tcmount 1.0.0 was totally rewritten
+to favor convention over personalization.
+It no longer manages a personal settings files,
+and all dependencies have been removed.
+Please read below (or use the previous release with `npm i -g tcmount@0.1.0`).
+
+:x::x::x::x::x::x::x::x::x::x::x::x:
+
 # tcmount
 
-[![Build Status](https://travis-ci.org/danyshaanan/tcmount.png?branch=master)](https://travis-ci.org/danyshaanan/tcmount)
-
-## A command line tool for mounting and dismounting TrueCrypt volumes
-tcmount lets you save links between truecrypt volumes and mount points, and mount and dismount them easily.
+[![Build Status](https://travis-ci.org/danyshaanan/tcmount.png)](https://travis-ci.org/danyshaanan/tcmount)
+[![NPM Version](https://img.shields.io/npm/v/tcmount.svg?style=flat)](https://npmjs.org/package/tcmount)
+[![License](http://img.shields.io/npm/l/tcmount.svg?style=flat)](LICENSE)
+[![Dependency Status](https://david-dm.org/danyshaanan/tcmount.svg)](https://david-dm.org/danyshaanan/tcmount)
+[![devDependency Status](https://david-dm.org/danyshaanan/tcmount/dev-status.svg)](https://david-dm.org/danyshaanan/tcmount#info=devDependencies)
+#### A command line tool for mounting and dismounting TrueCrypt volumes
 
 * * *
 ### Installation
 ```bash
 $ npm install -g tcmount
 ```
+
 * * *
 ### Usage
 
-`tcmount` shows you the list of your defined links, including their ids.
+`tcmount <name>` mounts `~/.tc/<name>.tc` onto `~/<name>`, or `~/.tc/<reservedname>.tc` to a preset path. One such reserved name is `chrome` which is mounted on `~/Library/Application Support/Google/Chrome`.
 
-Here is the result of `tcmount` in an environment with [this .tcmount file](https://github.com/danyshaanan/tcmount/blob/master/doc/dot.tcmount_example):
+Other reserved names can by seen with `tcmount -h`.
 
-![Screen shot of `tcmount`](https://raw.github.com/danyshaanan/tcmount/master/doc/tcmount_example.png?raw=true)
+If you need additional presets, open an issue or a pull request and I'll either add it or implement a way to customize presets.
 
-Green files or folders are mounted, yellow are not, and grey do not exist at the time.
 
-`tcmount <id>` will mount the link with that id.
+`tcmount -u <name>` unmounts `~/<name>` (or the reserved path).
 
-`tcmount -u <id>` will unmount the link with that id.
+`tcmount -l` lists currently mounted volumes.
 
-`tcmount -l <file> <mountpoint>` will create a link from the file to the mountpoint.
+`tcmount -h` prints the help screen.
 
-`tcmount -t <id>` will remove the link with that id.
-
-`tcmount <file> <mountpoint>` can be used to mount a file to a mountpoint without having it in your settings.
-
-`tcmount -o <id>` will open the link's target folder.
-
-Here is a flow of a few commands:
-
-![Screen shot some tcmount commands](https://raw.github.com/danyshaanan/tcmount/master/doc/tcmount_process_example.png?raw=true)
+`tcmount -v` prints the version number.
 
 * * *
 ### Info
-* The links data is saved as json in ~/.tcmount
+* Truecrypt is required
 * No support for key files or hidden volumes.
 * Not tested in Linux.
 
@@ -53,6 +57,5 @@ alias tu='tcmount -u'
 
 * * *
 ### Feedback
-* If you enjoyed this package, please star it [on Github](https://github.com/danyshaanan/tcmount).
-* You are invited to [Open an issue on Github](https://github.com/danyshaanan/tcmount/issues).
-* For other matters, my email address can be found on my [NpmJS page](https://www.npmjs.org/~danyshaanan), my [Github page](https://github.com/danyshaanan), or my [website](http://danyshaanan.com/).
+* [Open an issue](https://github.com/danyshaanan/tcmount/issues).
+* Mail me at an address that can be found on my [NPM](https://www.npmjs.org/~danyshaanan)/[Github](https://github.com/danyshaanan)/[Personal](http://danyshaanan.com/) page.

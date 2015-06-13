@@ -7,7 +7,7 @@
 var qp = require('./main.js')
 var cli = require('./lib/cli.js')
 
-var helpMessage = require('fs').readFileSync('./src/help.txt')
+var helpMessage = require('fs').readFileSync(__filename.replace(/\/[^\/]+$/, '') + '/help.txt')
   .toString()
   .replace(/BIN/g, Object.keys(require('../package.json').bin)[0])
   .replace(/RESERVED/, Object.keys(qp.reserved).map(function(c) { return '    ' + c + ' -> ~/' + qp.reserved[c]}).join('\n'))

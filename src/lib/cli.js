@@ -5,8 +5,10 @@ module.exports = (function() {
 
   var cli = {
     flags: argv.filter(function(arg) { return arg[0] === '-' }).join('').replace(/[^a-zA-Z]/g, ''),
-    target: argv.filter(function(arg) { return arg[0] !== '-' })[0]
+    targets: argv.filter(function(arg) { return arg[0] !== '-' })
   }
+
+  cli.target = cli.targets[0]
 
   cli.flags.split('').forEach(function(char) { cli[char] = true })
 

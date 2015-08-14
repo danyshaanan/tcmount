@@ -1,12 +1,10 @@
 'use strict'
 
-module.exports = function (grunt) {
+module.exports = function(grunt) {
 
   grunt.initConfig({
     eslint: {
-      all: {
-        src: ['src/**/*.js', 'Gruntfile.js']
-      }
+      target: ['**/*.js', '!node_modules/**/*']
     }
   })
 

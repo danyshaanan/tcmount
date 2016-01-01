@@ -35,7 +35,7 @@
   },
   "preferGlobal": true,
   "scripts": {
-    "lint": "./node_modules/.bin/eslint src",
+    "lint": "eslint .",
     "test": "npm run lint",
     "start": "npm test"
   },

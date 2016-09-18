@@ -1,13 +1,3 @@
-:x::x::x::x: NOTICE :x::x::x::x::x:
-
-tcmount 1.0.0 was totally rewritten
-to favor convention over personalization.
-It no longer manages a personal settings files,
-and all dependencies have been removed.
-Please read below (or use the previous release with `npm i -g tcmount@0.1.0`).
-
-:x::x::x::x::x::x::x::x::x::x::x::x:
-
 # tcmount
 
 [![Build Status](https://travis-ci.org/danyshaanan/tcmount.png)](https://travis-ci.org/danyshaanan/tcmount)

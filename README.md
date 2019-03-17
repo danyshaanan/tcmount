@@ -1,51 +1,17 @@
 # tcmount
 
-[![Build Status](https://travis-ci.org/danyshaanan/tcmount.png)](https://travis-ci.org/danyshaanan/tcmount)
-[![NPM Version](https://img.shields.io/npm/v/tcmount.svg?style=flat)](https://npmjs.org/package/tcmount)
-[![License](http://img.shields.io/npm/l/tcmount.svg?style=flat)](LICENSE)
-[![Dependency Status](https://david-dm.org/danyshaanan/tcmount.svg)](https://david-dm.org/danyshaanan/tcmount)
-[![devDependency Status](https://david-dm.org/danyshaanan/tcmount/dev-status.svg)](https://david-dm.org/danyshaanan/tcmount#info=devDependencies)
-#### A command line tool for mounting and dismounting TrueCrypt volumes
+Due to the discontinuation of TrueCrypt, this package is no longer supported or recommended!
 
-* * *
-### Installation
+Instead, use [VeraCrypt](https://www.veracrypt.fr). Install VeraCrypt on OSX with:
 ```bash
-$ npm install -g tcmount
+brew cask reinstall veracrypt osxfuse
 ```
 
-* * *
-### Usage
-
-`tcmount <name>` mounts `~/.tc/<name>.tc` onto `~/<name>`, or `~/.tc/<reservedname>.tc` to a preset path. One such reserved name is `chrome` which is mounted on `~/Library/Application Support/Google/Chrome`.
-
-Other reserved names can by seen with `tcmount -h`.
-
-If you need additional presets, open an issue or a pull request and I'll either add it or implement a way to customize presets.
-
-
-`tcmount -u <name>` unmounts `~/<name>` (or the reserved path).
-
-`tcmount -l` lists currently mounted volumes.
-
-`tcmount -h` prints the help screen.
-
-`tcmount -v` prints the version number.
-
-* * *
-### Info
-* Truecrypt is required
-* No support for key files or hidden volumes.
-* Not tested in Linux.
-
-* * *
-### Notes
-
+and use with these aliases:
 ```bash
-alias tm='tcmount'
-alias tu='tcmount -u'
+alias vc='/Applications/VeraCrypt.app/Contents/MacOS/VeraCrypt -t'
+alias vctc='vc --truecrypt'
+alias vu='vc -d'
+alias vm='vc -k="" --protect-hidden=no --pim=0'
+alias vmro='vm -m readonly'
 ```
-
-* * *
-### Feedback
-* [Open an issue](https://github.com/danyshaanan/tcmount/issues).
-* Mail me at an address that can be found on my [NPM](https://www.npmjs.org/~danyshaanan)/[Github](https://github.com/danyshaanan)/[Personal](http://danyshaanan.com/) page.
